@@ -131,6 +131,7 @@ app.get('*', (req, res) => { // if there's no match, and * (wild card) means mat
  * Port
  * -------------------------------------------------
  */
-app.listen(3000, () => { // should change when we up our app to prod
+const port = process.env.PORT || 3000; 
+app.listen(port, () => { // should change when we up our app to prod
     console.log('Server is up on port 3000');
 }); 
